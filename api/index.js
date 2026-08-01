@@ -81,8 +81,8 @@ export default async function handler(req, res) {
     }
   }
 
-  // ── POST /sync ────────────────────────────────────────────────────────────
-  if (pathname === '/sync' && req.method === 'POST') {
+  // ── POST /sync (GET also accepted for easy browser testing) ─────────────
+  if (pathname === '/sync') {
     console.log('[api] Sync requested — starting background worker ...');
     try {
       syncProblems()
@@ -105,6 +105,7 @@ export default async function handler(req, res) {
       console.log(`[api] Health check — scraped problems: ${count}`);
       return res.status(200).json({ status: 'ok', service: 'cf-scraper', scraped: count });
     } catch (err) {
+      console.error('[api] ✗ DB connection failed:', err.message);
       return res.status(200).json({ status: 'ok', service: 'cf-scraper', dbError: err.message });
     }
   }
