@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "build": "npm install && npx puppeteer browsers install chrome",
     "start": "node server.js",
     "sync": "node sync.js",
-    "test": "node test-scraper.js",
-    "vercel-build": "echo 'No build needed'"
+    "test": "node test-scraper.js"
   },
   "dependencies": {
     "mongodb": "^6.10.0",
