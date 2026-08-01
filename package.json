@@ -9,6 +9,7 @@
     "vercel-build": "echo 'No build needed'"
   },
   "dependencies": {
-    "mongodb": "^6.10.0"
+    "mongodb": "^6.10.0",
+    "puppeteer": "^22.0.0"
   }
 }
