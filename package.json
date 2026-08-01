@@ -1,20 +1,14 @@
 {
-  "name": "cf-scraper",
+  "name": "cf-scraper-service",
   "version": "1.0.0",
-  "description": "Serverless API for scraping and caching Codeforces problem statements. Deployed on Vercel, stores data in MongoDB.",
-  "license": "ISC",
-  "author": "",
   "type": "module",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
+    "start": "node server.js",
+    "sync": "node sync.js",
     "test": "node test-scraper.js",
     "vercel-build": "echo 'No build needed'"
   },
   "dependencies": {
     "mongodb": "^6.10.0"
-  },
-  "devDependencies": {}
+  }
 }
