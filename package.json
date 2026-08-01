@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "mongodb": "^6.10.0",
-    "puppeteer": "^22.0.0"
+    "puppeteer": "^23.11.1"
   }
 }
